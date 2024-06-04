@@ -1,0 +1,11 @@
+{
+  "name": "filtrjs",
+  "version": "1.0.0",
+  "description": "A library that utilizes RegEx to filter strings using custom .fltrjs files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "yodahe",
+  "license": "GPL-3.0-only"
+}

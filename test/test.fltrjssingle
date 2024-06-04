@@ -1,0 +1,4 @@
+TARGET test
+FLAGS gi
+REPLACEWITH tset
+COMPILE

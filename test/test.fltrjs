@@ -1,0 +1,10 @@
+FILTER:
+    TARGET test
+    FLAGS gi
+    REPLACEWITH tset
+    COMPILE
+FILTER:
+    TARGET foo
+    FLAGS gi
+    REPLACEWITH bar
+    COMPILE
