@@ -132,5 +132,5 @@ class Parser {
 
 module.exports = {
     Filter,
-    Parser,
+    Parser
 };
