@@ -54,10 +54,20 @@ class Filter {
                 await this.compile();
             }
         });
-        return "Success";
+        if (this.RegEx) {
+            return "Success";
+        } else {
+            console.error("[FLTRJS:] Failed to create Filter from file.")
+            return "Failed to create Filter from file.";
+        }
     }
     async apply(text) {
-        return text.replace(this.RegEx, this.ReplaceWith);
+        if (text) {
+            return text.replace(this.RegEx, this.ReplaceWith);
+        } else if (!text) {
+            console.error("[FLTRJS:] Text is undefined.");
+            return "Text is undefined";
+        }
     }
 }
 
@@ -65,15 +75,31 @@ class Parser {
     constructor() {}
 
     async applySingle(text, filter) {
-        return text.replace(filter.RegEx, filter.ReplaceWith);
+        if (filter && text) {
+            return text.replace(filter.RegEx, filter.ReplaceWith);
+        } else if (!filter) {
+            console.error("[FLTRJS:] Filter is undefined;");
+            return  "Filter is undefined.";
+        } else if (!text) {
+            console.error("[FLTRJS:] Text is undefined.");
+            return "Text is undefined";
+        }
     }
 
     async applyMany(text, filterList) {
-        let finalText = text;
-        for (const filter in filterList) {
-            finalText = await filterList[filter].apply(finalText);
+        if (filterList && text) {
+            let finalText = text;
+            for (const filter in filterList) {
+                finalText = await filterList[filter].apply(finalText);
+            }
+            return finalText;
+        } else if (!filterList) {
+            console.error("[FLTRJS:] FilterList is undefined.");
+            return "FilterList is undefined.";
+        } else if (!text) {
+            console.error("[FLTRJS:] Text is undefined.");
+            return "Text is undefined";
         }
-        return finalText;
     }
 
     async parseFltrjs(filePath) {
@@ -132,5 +158,5 @@ class Parser {
 
 module.exports = {
     Filter,
-    Parser
+    Parser,
 };

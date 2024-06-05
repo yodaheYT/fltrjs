@@ -1,9 +1,23 @@
 # fltrjs
 ## A Node.JS filtering library.
 ### <span style="color: #ffaaaa">This library is built for asynchronous applications. There will be no examples for synchronous applications.</span>
+[![Discord](https://img.shields.io/discord/1229949476689412238?style=for-the-badge&logo=discord&logoColor=%23ffffff)](https://discord.gg/3AZwXCu3KH)
+![Stars](https://img.shields.io/github/stars/yodaheYT/fltrjs?style=for-the-badge&logo=github)
+![NPM Version](https://img.shields.io/npm/v/fltrjs?style=for-the-badge&logo=npm&logoColor=%23ffffff)
 
-Documentation based on fltrjs V1.0.0<br>
+Documentation based on fltrjs V1.0.1<br>
 All built in tests PASS
+
+```bash
+$ npm test
+
+> fltrjs@1.0.1 test
+> node test/test.js
+
+Test 1/3: PASS
+Test 2/3: PASS
+Test 3/3: PASS
+```
 
 ## Install:
 Start by installing the library:
@@ -12,7 +26,7 @@ npm i fltrjs
 ```
 
 ## fltrjs Format
-Both .fltrjs and .fltrjs single should be named \<name\>.\<extension\>. They will work without a name, it's just not recommended.
+Both .fltrjs and .fltrjs single should be named `<name>.<extension>`. They will work without a name, it's just not recommended.
 
 Create a .fltrjs file:<br>
 >.fltrjs files are used when you need multiple filters at once.

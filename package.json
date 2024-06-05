@@ -1,6 +1,6 @@
 {
   "name": "fltrjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library that utilizes RegEx to filter strings using custom .fltrjs or .fltrjssingle files.",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/yodaheYT/fltrjs.git"
   },
+  "keywords": [
+    "Filter",
+    "RegEx",
+    "fltrjs",
+    "fltrjssingle"
+  ],
   "bugs": {
-    "url": "https://github.com/yodaheYT/fltrjs/issues"
+    "url": "https://github.com/yodaheYT/fltrjs/issues",
+    "email": "yodahe.development@gmail.com"
   },
   "author": "yodahe",
-  "license": "GPL-3.0-only"
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/yodaheYT/fltrjs"
 }
